@@ -1,5 +1,5 @@
 // ===================================
-// Companion LLC Website - JavaScript
+// Zinthora LLC Website - JavaScript
 // ===================================
 
 // Wait for DOM to be fully loaded
@@ -472,5 +472,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Highlight active section on load
     highlightActiveSection();
     
-    console.log('Companion LLC Website - JavaScript Loaded Successfully');
+    console.log('Zinthora LLC Website - JavaScript Loaded Successfully');
 });
