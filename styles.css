@@ -501,32 +501,64 @@ section {
     margin: 1.5rem 0;
 }
 
-.app-store-badge a,
-.app-store-badge button {
-    display: inline-block;
-    height: auto;
-    margin: 0.375rem;
-    vertical-align: middle;
-    transition: all var(--transition-normal);
-    opacity: 0.95;
-}
-
-.app-store-badge button {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font: inherit;
-}
-
 .app-store-badge img {
     display: block;
 }
 
-.app-store-badge a:hover,
-.app-store-badge button:hover {
-    opacity: 1;
-    transform: scale(1.05);
+/* The store badges, drawn as harmony.zinthora.com draws them (its StoreBadges
+   component) rather than from the stores' image files: black, rounded, a thin light
+   border, the mark on the left and two lines of text beside it. Fixed height so the
+   pair line up whatever the text does. Written for the <a> and the <button> alike. */
+.store-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 12px 0 10px;
+    background: #000;
+    border: 1px solid #a6a6a6;
+    border-radius: 8px;
+    color: #fff;
+    font: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: border-color var(--transition-normal);
+}
+
+.store-badge:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.store-badge__mark {
+    flex: none;
+    width: 24px;
+    height: 24px;
+}
+
+.store-badge__text {
+    display: grid;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.store-badge__lead {
+    font-size: 10px;
+    letter-spacing: 0.02em;
+}
+
+.store-badge__store {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 /* The QR code over the store badges. Harmony's own navy on cream — dark on light

@@ -44,7 +44,8 @@ images/
   icons/        Favicons, touch icon and the Harmony app icon
   logos/        The Zinthora logo
   screenshots/  Harmony screenshots shown on the product card
-  *.png         App Store and Google Play badges, and the Harmony QR code
+  *.png         The Harmony QR code (the two store badge images are no longer used:
+                the badges are drawn in HTML and CSS, as on harmony.zinthora.com)
 ```
 
 The only external resources are the Inter typeface from Google Fonts and the form service the
