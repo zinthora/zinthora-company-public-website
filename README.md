@@ -13,12 +13,17 @@ The site is a single page (`index.html`) with four sections:
 | --- | --- |
 | **Home** | The company name, tagline and a short statement of what Zinthora makes |
 | **Our Approach** | The six principles the products are built on: calm by design, made to be put down, safe before it reaches you, kind spaces, worth over popularity, respect for your attention |
-| **Products** | [Harmony](https://harmony.zinthora.com), a quiet place for short videos — description, screenshots, features and store badges |
+| **Products** | [Harmony](https://harmony.zinthora.com), a quiet place for short videos — description, screenshots, features, a QR code and store badges |
 | **Contact** | Four cards — address, support email, Harmony support and social links — beside a contact form for questions and feedback |
 
 The footer repeats the section links and the social links
 ([LinkedIn](https://www.linkedin.com/company/zinthora) and
 [YouTube](https://www.youtube.com/@harmonyapplication)).
+
+The QR code over the store badges (`images/harmony-qr.png`) opens
+`https://harmony.zinthora.com/get`, which sends the phone that scanned it straight to its own
+store. It is a static image — the same code as on the Harmony business card and site — so if
+that address ever changes the image has to be regenerated. It is hidden on phone-width screens.
 
 Harmony is available on
 [Google Play](https://play.google.com/store/apps/details?id=com.zinthora.harmony). The App
@@ -39,7 +44,7 @@ images/
   icons/        Favicons, touch icon and the Harmony app icon
   logos/        The Zinthora logo
   screenshots/  Harmony screenshots shown on the product card
-  *.png         App Store and Google Play badges
+  *.png         App Store and Google Play badges, and the Harmony QR code
 ```
 
 The only external resources are the Inter typeface from Google Fonts and the form service the
