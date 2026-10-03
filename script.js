@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Validate form
             if (validateForm(formData)) {
-                debugger;
                 const submitButton = contactForm.querySelector('button[type="submit"]');
                 const originalButtonText = submitButton.textContent;
                 
@@ -279,52 +278,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.product-card, .why-card, .contact-item, .value-item');
+    const animateElements = document.querySelectorAll('.product-card, .why-card, .contact-item');
     animateElements.forEach(element => {
         observer.observe(element);
-    });
-    
-    // ===================================
-    // Smooth Button Hover Effects
-    // ===================================
-    const buttons = document.querySelectorAll('.btn');
-    
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', function(e) {
-            const ripple = document.createElement('span');
-            ripple.style.position = 'absolute';
-            ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(255, 255, 255, 0.1)';
-            ripple.style.width = '0';
-            ripple.style.height = '0';
-            ripple.style.pointerEvents = 'none';
-            
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
-        });
-    });
-    
-    // ===================================
-    // Product Card Link Smooth Scroll
-    // ===================================
-    const productLinks = document.querySelectorAll('.product-link');
-    
-    productLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetSection.offsetTop - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
     });
     
     // ===================================
@@ -516,39 +472,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Highlight active section on load
     highlightActiveSection();
     
-    // Add loaded class to body for any CSS transitions
-    document.body.classList.add('loaded');
-    
     console.log('Companion LLC Website - JavaScript Loaded Successfully');
 });
-
-// ===================================
-// Additional Utility Functions
-// ===================================
-
-// Debounce function for performance optimization
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Throttle function for scroll events
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
-}
