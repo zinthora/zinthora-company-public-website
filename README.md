@@ -14,7 +14,11 @@ The site is a single page (`index.html`) with four sections:
 | **Home** | The company name, tagline and a short statement of what Zinthora makes |
 | **Our Approach** | The six principles the products are built on: calm by design, made to be put down, safe before it reaches you, kind spaces, worth over popularity, respect for your attention |
 | **Products** | [Harmony](https://harmony.zinthora.com), a quiet place for short videos — description, screenshots, features and store badges |
-| **Contact** | The company address, support email and a contact form |
+| **Contact** | Four cards — address, support email, Harmony support and social links — beside a contact form for questions and feedback |
+
+The footer repeats the section links and the social links
+([LinkedIn](https://www.linkedin.com/company/zinthora) and
+[YouTube](https://www.youtube.com/@harmonyapplication)).
 
 Harmony is available on
 [Google Play](https://play.google.com/store/apps/details?id=com.zinthora.harmony). The App
@@ -59,6 +63,13 @@ Then open <http://localhost:8000>.
   lightbox automatically.
 - **Listing Harmony on the App Store:** replace the `store-badge-soon` button in `index.html`
   with a link to the listing, the same way the Google Play badge is done.
+- **Product screenshots:** the three Harmony screenshots are 720 px wide JPEGs made from the
+  app's store screenshots. They sit side by side, so keep the phone at the same size and the
+  same height in each one, or the row looks uneven.
+- **Contact cards:** each card is a `contact-item` block in `index.html`. The cards stretch to
+  match the height of the form, so adding or removing one keeps the two columns level.
+- **Social links:** they appear twice, in the "Follow Us" contact card and in the footer.
+  Change both.
 - **Images:** keep them under `images/`, in the matching subfolder.
 
 ## This repository is public
