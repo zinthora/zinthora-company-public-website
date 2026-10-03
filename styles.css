@@ -409,6 +409,11 @@ section {
     background: linear-gradient(135deg, var(--bg-light) 0%, rgba(99, 102, 241, 0.05) 100%);
 }
 
+/* The featured card already has a coloured border all round, so the top accent bar would double it up */
+.product-card.featured::before {
+    display: none;
+}
+
 .product-icon {
     width: 60px;
     height: 60px;
