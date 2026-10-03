@@ -382,6 +382,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ===================================
+    // Store Badges Not Yet Live
+    // ===================================
+    const comingSoonBadges = document.querySelectorAll('.store-badge-soon');
+
+    comingSoonBadges.forEach(badge => {
+        const message = document.getElementById(badge.getAttribute('aria-describedby'));
+        let messageTimer = null;
+
+        badge.addEventListener('click', function() {
+            if (!message) return;
+            message.textContent = 'Coming soon to the App Store.';
+            clearTimeout(messageTimer);
+            messageTimer = setTimeout(() => {
+                message.textContent = '';
+            }, 4000);
+        });
+    });
+
+    // ===================================
     // Image Lightbox
     // ===================================
     const lightbox = document.getElementById('lightbox');
