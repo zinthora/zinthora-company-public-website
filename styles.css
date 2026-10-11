@@ -507,8 +507,9 @@ section {
 
 /* The store badges, drawn as harmony.zinthora.com draws them (its StoreBadges
    component) rather than from the stores' image files: black, rounded, a thin light
-   border, the mark on the left and two lines of text beside it. Fixed height so the
-   pair line up whatever the text does. Written for the <a> and the <button> alike. */
+   border, the mark on the left and two lines of text beside it. Fixed height and
+   width so the pair match whatever the text does, side by side or stacked on a
+   phone. Written for the <a> and the <button> alike. */
 .store-badges {
     display: flex;
     flex-wrap: wrap;
@@ -519,7 +520,9 @@ section {
 .store-badge {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    width: 164px;
     height: 44px;
     padding: 0 12px 0 10px;
     background: #000;
